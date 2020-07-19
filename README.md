@@ -322,7 +322,7 @@ Back in our primary backend function, the `upsertUsers()` method registers both 
 
 Back to the `router.post` function. Now that we have our client configured with the proper credentials, and our users registered with that client, we can open a channel for the two to chat. Stream's `channel()` method first accepts a [channel type](https://getstream.io/chat/docs/channel_features/?language=js); `'messaging'` is the best type for this app.
 
-Each channel on your client should have a unique name. For simplicity, we use the customer's email address, so that if the user is disconnected from their chat, they can return to it by entering the same credentials into the registration form. In your production application you should create secure id's that can't be guessed.
+Each channel on your client should have a unique name. For simplicity, we use the customer's email address, so that if the user is disconnected from their chat, they can return to it by entering the same credentials into the registration form. In your production application, you should create secure id's that can't be guessed.
 
 The `members` argument specifies which users can join this channel. This is not required for the channel, but by specifying the members, we add a layer of security by preventing other users from joining the channel. If `members` is not included with the arguments, the channel will be public by default.
 
@@ -412,7 +412,7 @@ The responses from the backend are used in the same manner for the frontend:
 
 The `chatClient` and `channel` states determine what to render on the page. After a successful response from the backend, these objects are present, and the Stream Chat components will be rendered. 
 
-To create a fully functional chat component from scratch would be a monumental task. Using the Stream's components get's you going quickly. Keep in mind that the Stream Chat Components used here are the most basic, but Stream offers deeper customization.
+To create a fully functional chat component from scratch would be a monumental task. Using the Stream's components gets you going quickly. Keep in mind that the Stream Chat Components used here are the most basic, but Stream offers deeper customization.
 
 ## That's a Wrap
 
